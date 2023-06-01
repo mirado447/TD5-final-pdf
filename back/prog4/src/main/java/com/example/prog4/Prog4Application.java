@@ -10,4 +10,5 @@ public class Prog4Application {
 		SpringApplication.run(Prog4Application.class, args);
 	}
 
+
 }
