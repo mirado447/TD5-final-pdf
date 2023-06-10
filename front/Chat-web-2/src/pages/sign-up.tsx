@@ -68,6 +68,7 @@ const Inscription = () => {
             <p>Bio</p>
             <input type="text" value={bio} onChange={hundleChangeBio} />
             <button type="submit"> Inscription </button>
+            <button>Connexion</button>
         </form>
         </>
     );

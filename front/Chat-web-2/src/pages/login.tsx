@@ -9,8 +9,7 @@ const SingUp = () => {
 
  const hundleChangeEmail = (e: React.ChangeEvent<HTMLInputElement> ) => {setEmail(e.target.value)} ;
  const hundleChangePassword = (e: React.ChangeEvent<HTMLInputElement>) => {setPassword(e.target.value);}
- const hundleSubmit = ( e : any) => {e.preventDefault() ;
- const local = localStorage.getItem('userData')
+ const hundleSubmit = ( e : React.FormEvent<HTMLFormElement>) => {e.preventDefault() ;
  
  /**
   * if(typeof local !== undefined){
@@ -45,14 +44,16 @@ const SingUp = () => {
 
  return (
       <>
-        <form onSubmit={hundleSubmit}>
-          <h2>Login form</h2>
-          <p>email</p>
-          <input type="text"value={email} onChange={hundleChangeEmail} />
-          <p>password</p>
-          <input type="password" value={password} onChange={hundleChangePassword}/>
-          <button type="submit">connexion</button>
-        </form>
+        <div className="login">   
+          <form onSubmit={hundleSubmit}>
+            <h2>Login form</h2>
+            <p>email</p>
+            <input type="text"value={email} onChange={hundleChangeEmail} />
+            <p>password</p>
+            <input type="password" value={password} onChange={hundleChangePassword}/>
+            <button type="submit">connexion</button>
+          </form>
+        </div>
       </>
 );
 };
